@@ -1,0 +1,1 @@
+Utilities are supportive scripts that are used across your project but are not part of the core simulation logic. This can include Logging, Data Processing of inputs and outputs and Mathematical Tools such as Custom mathematical functions or algorithms that support your simulation but are generic enough to be separated from the main logic.

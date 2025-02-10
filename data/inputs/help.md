@@ -1,0 +1,1 @@
+The inputs has to have te initial configuration of the program or simulation.

@@ -1,0 +1,1 @@
+This file has to be written so anyone could install it using pip install requirements.txt

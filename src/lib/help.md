@@ -1,0 +1,1 @@
+Whenever I have functions that I will use in a lot of other files. This is useful to avoid "monocode": only one folder with all the code.

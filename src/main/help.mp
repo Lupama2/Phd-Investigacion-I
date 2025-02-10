@@ -1,0 +1,1 @@
+This directory houses the core functionality of your fluid simulation project. It typically includes the main script(s) that run the simulation, along with other scripts that are directly involved in the simulation process.
