@@ -15,11 +15,12 @@ sigma = 0.07031 #Tensión superficial [N/m]. Valor obtenido del código de Gabri
 mu = 0.000869 #Viscosidad [Pa.s]. Valor obtenido del código de Gabriela
 p_0 = 0.925*(101325) #Presión ambiente en el infinito en [Pa]. Son 0.925 atm correspondientes a Bariloche. Conversión: (atm)(101325 Pa/atm)
 K = 1.380649e-23 #constante de Boltzmann [J/K], obtenida de NIST
-N_A = 6.02214076e23 #Nro de avogadro [1/mol], obtenida de NIST
+N_A = 6.02214076e23 #Nro de avogadro [1/mol], obtenida de NIST}
+R_GI = 8.3145 #Constante de los gases ideales. J mol^-1 K^-1. La saqué de Wikipedia
 
 
 #Parameters to play with
-n = 1e-4 #Nro de moles de Ar
+n = 1e-10 #Nro de moles de Ar
 
 
 
@@ -29,7 +30,7 @@ def Vol(R):
 
 def p_g(R, T):
 
-    p = n*R*T/Vol(R)
+    p = n*R_GI*T/Vol(R)
 
     return p
 
