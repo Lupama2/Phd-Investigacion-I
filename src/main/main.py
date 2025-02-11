@@ -22,7 +22,9 @@ R_GI = 8.3145 #Constante de los gases ideales. J mol^-1 K^-1. La saqué de Wikip
 #Parameters to play with
 n = 1e-8 #Nro de moles de Ar
 
-
+A_s = p_0 #Amplitude of acustic pressure. Pa
+f = 1e3 #Frequency of acustic pressure. Hz
+phi = 0 #Phase of acustic pressure. rad
 
 def Vol(R):
     # Volumen de una esfera
@@ -33,6 +35,11 @@ def p_g(R, T):
     p = n*R_GI*T/Vol(R)
 
     return p
+
+def p_s(t):
+
+    w = 2*pi*f
+    return A_s*np.sin(w*t + phi)
 
 
 
@@ -45,7 +52,7 @@ def derivative(t, y):
 
     #Ecuacion de Rayleigh-Plesset
     dydt[1 - 1] = y2
-    dydt[2 - 1] = 1/y1*( 1/rho_0*( p_g(y1,y3) - 2*sigma/y1 - 4*mu*y2/y1 - p_0 ) - 3/2*y2**2   )
+    dydt[2 - 1] = 1/y1*( 1/rho_0*( p_g(y1,y3) - 2*sigma/y1 - 4*mu*y2/y1 - p_0 - p_s(t) ) - 3/2*y2**2   )
 
     #Ecuación de la energía
     dydt[3 - 1] = -p_g(y1,y3)*y1**2*y2*8*pi/(3*K*n*N_A)
