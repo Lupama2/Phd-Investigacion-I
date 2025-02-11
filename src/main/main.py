@@ -20,7 +20,7 @@ R_GI = 8.3145 #Constante de los gases ideales. J mol^-1 K^-1. La saqué de Wikip
 
 
 #Parameters to play with
-n = 1e-10 #Nro de moles de Ar
+n = 1e-8 #Nro de moles de Ar
 
 
 
