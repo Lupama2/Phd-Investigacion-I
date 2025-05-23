@@ -23,7 +23,7 @@ R_GI = 8.3145 #Constante de los gases ideales. J mol^-1 K^-1. La saqué de Wikip
 n = 1e-8 #Nro de moles de Ar
 
 A_s = p_0 #Amplitude of acustic pressure. Pa
-f = 1e3 #Frequency of acustic pressure. Hz
+f = 0#1e3 #Frequency of acustic pressure. Hz
 phi = 0 #Phase of acustic pressure. rad
 
 def Vol(R):
