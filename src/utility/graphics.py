@@ -34,4 +34,4 @@ def plot_results(data, A, f, d):
 
     plt.show()
 
-    return
+    return fig, ax
