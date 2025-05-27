@@ -43,4 +43,10 @@ for i, arg in enumerate(y0):
 
 fun(0.,y0,ps_argument)
 
-print(fun(0,y0,ps_argument))
+#Resuelvo fun con solve_ivp
+from scipy.integrate import solve_ivp
+
+sol = solve_ivp(fun, [0, t_fin], y0, args=(ps_argument,), method='RK45', rtol
+=1e-6, atol=1e-9)
+# Print the solution
+print("Time points:", sol.t)
