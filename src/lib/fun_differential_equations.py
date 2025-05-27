@@ -2,16 +2,8 @@ import numpy as np
 from numba import njit
 
 
-#La estructura del repo es
-#lib
-#  - fun_differential_equations.py
-#  - __init__.py
-#main
-#  - parameters.py
-#  - __init__.py
-
 #Import parameters
-from ..main.parameters import PATM, T_AMB, N, NA, KB, NK, A, B, RHO_AGUA, VISCOSIDAD, VISCOSIDAD_K, S_SUP, C_INF
+from src.main.parameters import PATM, T_AMB, N, NA, KB, NK, A, B, RHO_AGUA, VISCOSIDAD, VISCOSIDAD_K, S_SUP, C_INF
 
 '''
 P Acustica
