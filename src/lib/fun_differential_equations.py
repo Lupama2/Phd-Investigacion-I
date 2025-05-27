@@ -1,5 +1,4 @@
 import numpy as np
-from numba import njit
 
 
 #Import parameters
@@ -8,16 +7,16 @@ from src.main.parameters import PATM, T_AMB, N, NA, KB, NK, A, B, RHO_AGUA, VISC
 '''
 P Acustica
 '''
-@njit(cache=True)
-def ps(t:float, A:list[float], f:list[float], d:list[float]):
+
+def ps(t, A, f, d):
     """JIT-compiled version of pressure function"""
     r = 0.0
     for i in range(len(A)):
         r += A[i] * np.sin(2*np.pi * (t*f[i] + d[i]))
     return r
 
-@njit(cache=True)
-def psdot(t:float, A:list[float], f:list[float], d:list[float]):
+
+def psdot(t, A, f, d):
     """JIT-compiled version of pressure derivative function"""
     r = 0.0
     for i in range(len(A)):
@@ -28,7 +27,7 @@ def psdot(t:float, A:list[float], f:list[float], d:list[float]):
 '''
 Eqs Diferenciales
 '''
-@njit(cache=True)
+
 def fun(t, y, ps_args):
     """JIT-compiled version"""
     R, RDot, T, a, aDot = y
