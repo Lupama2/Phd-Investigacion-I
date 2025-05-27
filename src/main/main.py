@@ -55,15 +55,15 @@ print("Time points:", sol.t)
 from src.utility.graphics import plot_results
 
 #Creo arrays A_ps_array que tiene el mismo tamaño que sol.t. Recordemos que A_ps ya es un numpy array
-A_ps_array = np.tile(A_ps, (len(sol.t), 1)).T[0].tolist()
-f_ps_array = np.tile(f_ps, (len(sol.t), 1)).T[0].tolist()
-d_ps_array = np.tile(d_ps, (len(sol.t), 1)).T[0].tolist()
+# A_ps_array = np.tile(A_ps, (len(sol.t), 1)).T[0].tolist()
+# f_ps_array = np.tile(f_ps, (len(sol.t), 1)).T[0].tolist()
+# d_ps_array = np.tile(d_ps, (len(sol.t), 1)).T[0].tolist()
 
-print("A_ps_array:", A_ps_array)
+# print("A_ps_array:", A_ps_array)
 
-#Imprimo tipos de datos
-print("Type of A_ps_array:", type(A_ps_array))
-print("Type of f_ps_array:", type(f_ps_array))
-print("Type of d_ps_array:", type(d_ps_array))
+# #Imprimo tipos de datos
+# print("Type of A_ps_array:", type(A_ps_array))
+# print("Type of f_ps_array:", type(f_ps_array))
+# print("Type of d_ps_array:", type(d_ps_array))
 
-plot_results(sol, A_ps_array, f_ps_array, d_ps_array)
+plot_results(sol, A_ps, f_ps, d_ps)

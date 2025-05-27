@@ -30,7 +30,7 @@ def plot_results(data, A, f, d):
 
     ax[-1].set_ylabel("P Acustica[atm]")
     ax[-1].set_xlabel("Tiempo[s]")
-    ax[-1].plot(t, ps(t, A, f, d)/PATM)
+    ax[-1].plot(data['t'], ps(data['t'], A, f, d)/PATM)
 
     plt.show()
 
