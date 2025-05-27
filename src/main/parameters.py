@@ -4,7 +4,7 @@
 Constantes y Cond Iniciales
 '''
 PATM = 98000.     # Pascals
-T_AMB = 293      # Kelvin
+T_AMB = 293.      # Kelvin
 N = 6e15         # Num Particulas
 NA = 6.022e23    # N Avogadro
 KB = 1.38e-23    # J/K
