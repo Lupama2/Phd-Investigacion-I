@@ -1,7 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_results(data):
+from src.lib.fun_differential_equations import ps
+
+from src.main.parameters import PATM
+
+def plot_results(data, A, f, d):
     #Plot the results of the simulation.
 
     fig, ax = plt.subplots(4, figsize = (8,6), dpi = 120, tight_layout = True, sharex=True)
@@ -26,6 +30,8 @@ def plot_results(data):
 
     ax[-1].set_ylabel("P Acustica[atm]")
     ax[-1].set_xlabel("Tiempo[s]")
-    ax[-1].plot(T, psT/PATM)
+    ax[-1].plot(t, ps(t, A, f, d)/PATM)
 
-    fig.show()
+    plt.show()
+
+    return
