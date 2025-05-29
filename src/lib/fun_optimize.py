@@ -14,14 +14,14 @@ from src.lib.fun_identification import instability
 #Import parameters
 from src.main.parameters import T_AMB
 
-def optimize_pressure(A_ps, f_ps, plot = False, verbose = False):
+def optimize_pressure(A_ps, f_ps, d_ps, plot = False, verbose = False):
 
     #Convierto a listas
     A_ps = np.array([A_ps])
     f_ps = np.array([f_ps])
 
     #Asigno fase
-    d_ps = np.array([0.])
+    d_ps = np.array([d_ps])
 
     #Initial conditions (directamente del código de Nicolás)
     R0 = 1e-3

@@ -14,7 +14,7 @@ f_ps = 1e3
 # freq_limits:tuple[float] = (1e3,2e6)
 
 # Call the optimization function
-optimize_pressure(A_ps, f_ps)
+# optimize_pressure(A_ps, f_ps)
 
 #Uso Bayesian Optimization de Optuna para maximizar la temperatura máxima
 import optuna
@@ -24,9 +24,10 @@ def objective(trial):
     # Define the search space for the parameters, ambos log
     A_ps = trial.suggest_float('A_ps', 1, PATM, log=True)  # Pressure amplitude
     f_ps = trial.suggest_float('f_ps', 1e3, 2e6, log=True)  # Pressure frequency
+    d_ps = trial.suggest_float('d_ps', 0, 2 * np.pi)  # Phase shift
 
     # Call the optimization function
-    max_temp_value, instability_bool = optimize_pressure(A_ps, f_ps)
+    max_temp_value, instability_bool = optimize_pressure(A_ps, f_ps, d_ps)
 
     # Return the maximum temperature value as the objective to maximize
     return max_temp_value
@@ -48,4 +49,4 @@ study.optimize(objective, n_trials=10, n_jobs=-1)
 # Ejecutar nuevamente el mejor caso
 best_params = study.best_params
 
-max_temp_value, instability_bool = optimize_pressure(best_params['A_ps'], best_params['f_ps'], plot=True, verbose=True)
+max_temp_value, instability_bool = optimize_pressure(best_params['A_ps'], best_params['f_ps'], best_params['d_ps'], plot=True, verbose=True)
