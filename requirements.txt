@@ -53,6 +53,7 @@ https://repo.anaconda.com/pkgs/main/win-64/lcms2-2.16-h62be587_1.conda
 https://repo.anaconda.com/pkgs/main/win-64/llvmlite-0.44.0-py313h8b1c7eb_1.conda
 https://repo.anaconda.com/pkgs/main/win-64/markupsafe-3.0.2-py313h827c3e9_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/mkl-service-2.4.0-py313h827c3e9_2.conda
+https://repo.anaconda.com/pkgs/main/win-64/narwhals-1.31.0-py313haa95532_1.conda
 https://repo.anaconda.com/pkgs/main/win-64/nest-asyncio-1.6.0-py313haa95532_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/openjpeg-2.5.2-h9b5d1b5_1.conda
 https://repo.anaconda.com/pkgs/main/win-64/packaging-24.2-py313haa95532_0.conda
@@ -86,6 +87,7 @@ https://repo.anaconda.com/pkgs/main/win-64/matplotlib-inline-0.1.6-py313haa95532
 https://repo.anaconda.com/pkgs/main/win-64/numpy-base-2.1.3-py313h6011491_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/pillow-11.1.0-py313hea0d53e_1.conda
 https://repo.anaconda.com/pkgs/main/noarch/pip-25.1-pyhc872135_2.conda
+https://repo.anaconda.com/pkgs/main/win-64/plotly-6.0.1-py313h4442805_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/prompt-toolkit-3.0.43-py313haa95532_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/python-dateutil-2.9.0post0-py313haa95532_2.conda
 https://repo.anaconda.com/pkgs/main/win-64/qtsvg-6.7.3-hf2fb9eb_0.conda
