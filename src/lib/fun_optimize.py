@@ -31,7 +31,7 @@ def optimize_pressure(A_ps, f_ps, d_ps, plot = False, verbose = False):
     aDot0 = 0.
 
     #Simulation parameters
-    t_fin = 1e-3
+    t_fin = 3e-3
 
     #arguments of fun
     ps_argument = [A_ps, f_ps, d_ps]
