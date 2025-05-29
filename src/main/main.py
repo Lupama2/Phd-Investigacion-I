@@ -31,15 +31,19 @@ def objective(trial):
     # Return the maximum temperature value as the objective to maximize
     return max_temp_value
 
-# Create a study object
-study = optuna.create_study(direction="maximize")
+
+storage_path = "data/outputs/study.db"
+
+study = optuna.create_study(
+    direction="maximize",
+    study_name="study",
+    storage=f"sqlite:///{storage_path}"
+    # load_if_exists=  # Esto te permite continuar si ya existe el estudio
+)
+
 
 # Optimize the objective function
-study.optimize(objective, n_trials=10000, n_jobs=-1)
-
-# Save study
-import joblib
-joblib.dump(study, 'data/outputs/study.pkl')
+study.optimize(objective, n_trials=10, n_jobs=-1)
 
 # Ejecutar nuevamente el mejor caso
 best_params = study.best_params
