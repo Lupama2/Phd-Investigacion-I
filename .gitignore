@@ -1,0 +1,7 @@
+#__pycache__ folders
+__pycache__/
+
+*.png
+*.pkl
+*.db
+*.html
