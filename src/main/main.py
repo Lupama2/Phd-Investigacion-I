@@ -44,7 +44,7 @@ study = optuna.create_study(
 
 
 # Optimize the objective function
-study.optimize(objective, n_trials=10, n_jobs=-1)
+study.optimize(objective, n_trials=1000, n_jobs=-1)
 
 # Ejecutar nuevamente el mejor caso
 best_params = study.best_params
